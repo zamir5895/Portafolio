@@ -1,4 +1,3 @@
-// Menu Show/Hide
 const navMenu = document.getElementById('nav-menu'),
     navToggle = document.getElementById('nav-toggle'),
     navClose = document.getElementById('nav-close')
@@ -15,7 +14,6 @@ if(navClose){
     })
 }
 
-// Remove menu mobile
 const navLink = document.querySelectorAll('.nav__link')
 function linkAction() {
     const navMenu = document.getElementById('nav-menu')
@@ -23,7 +21,6 @@ function linkAction() {
 }
 navLink.forEach(n=> n.addEventListener('click', linkAction))
 
-// Skills Accordion
 const skillsContent = document.getElementsByClassName('skills__content'),
         skillsHeader = document.querySelectorAll('.skills__header')
 function skillsToggle() {
@@ -39,10 +36,8 @@ skillsHeader.forEach((eL)=>{
     eL.addEventListener('click', skillsToggle)
 })
 
-// Portfolio Swiper
 let swiper;
 
-// Scroll sections active link
 const sections = document.querySelectorAll('section[id]')
 
 function scrollActive(){
@@ -62,21 +57,18 @@ function scrollActive(){
 }
 window.addEventListener('scroll', scrollActive)
 
-// Change background header
 function scrollHeader(){
     const nav = document.getElementById('header')
     if(this.scrollY >= 80) nav.classList.add('scroll-header'); else nav.classList.remove('scroll-header')
 }
 window.addEventListener('scroll', scrollHeader)
 
-// Show scroll up
 function scrollUp(){
     const scrollUp = document.getElementById('scroll-up');
     if(this.scrollY >= 560) scrollUp.classList.add('show-scroll'); else scrollUp.classList.remove('show-scroll')
 }
 window.addEventListener('scroll', scrollUp)
 
-// Dark Light Theme
 const themeButton = document.getElementById('theme-button')
 const darkTheme = 'dark-theme'
 const iconTheme = 'uil-sun'
@@ -99,12 +91,10 @@ themeButton.addEventListener('click', () => {
     localStorage.setItem('selected-icon', getCurrentIcon())
 })
 
-// Language Toggle - Detect browser language
 const languageButton = document.getElementById('language-toggle')
 const browserLang = navigator.language || navigator.userLanguage
 let currentLanguage = localStorage.getItem('language') || (browserLang.startsWith('es') ? 'es' : 'en')
 
-// Translations
 const translations = {
     es: {
         'nav-home': 'Inicio',
@@ -199,18 +189,15 @@ function updateLanguage() {
         }
     })
     
-    // Update CV download link
     const cvLink = document.getElementById('download-cv')
     if (cvLink) {
         cvLink.href = currentLanguage === 'es' ? 'pdf/ZamirrCVEspañol.pdf' : 'pdf/ZamirrCVEnglish.pdf'
     }
     
-    // Update page title
     document.title = currentLanguage === 'es' 
         ? 'Zamir Lizardo - Desarrollador Fullstack Portfolio'
         : 'Zamir Lizardo - Fullstack Developer Portfolio'
     
-    // Update meta description
     const metaDescription = document.querySelector('meta[name="description"]')
     if (metaDescription) {
         metaDescription.content = currentLanguage === 'es'
@@ -218,10 +205,7 @@ function updateLanguage() {
             : 'Zamir Lizardo - Fullstack Developer with expertise in React, Node.js, Python, and Java. Portfolio showcasing web and mobile development projects.'
     }
     
-    // Update language button text
     languageButton.textContent = currentLanguage === 'es' ? 'EN' : 'ES'
-    
-    // Update tooltips
     updateTooltips()
 }
 
@@ -231,10 +215,8 @@ languageButton.addEventListener('click', () => {
     updateLanguage()
 })
 
-// Initialize language
 updateLanguage()
 
-// Intersection Observer for animations
 const observerOptions = {
     threshold: 0.1,
     rootMargin: '0px 0px -50px 0px'
@@ -249,27 +231,20 @@ const observer = new IntersectionObserver((entries) => {
     })
 }, observerOptions)
 
-// Initialize Portfolio Swiper with beautiful coverflow and perfect infinite loop
 document.addEventListener('DOMContentLoaded', () => {
     const swiperContainer = document.querySelector('.portafolio__container');
     if (swiperContainer) {
         const actualSlides = swiperContainer.querySelectorAll('.swiper-slide').length;
         console.log('Found', actualSlides, 'slides in container');
         
-        // Wait for DOM to be fully ready
         setTimeout(() => {
             swiper = new Swiper('.portafolio__container', {
-                // Core configuration for beautiful visual effect
-                slidesPerView: 3,
+                slidesPerView: 2,
                 spaceBetween: 50,
                 centeredSlides: true,
                 
-                // Perfect infinite loop configuration
                 loop: true,
-                loopAdditionalSlides: 2,
-                loopedSlides: actualSlides,
                 
-                // Beautiful coverflow effect restored
                 effect: 'coverflow',
                 grabCursor: true,
                 coverflowEffect: {
@@ -280,7 +255,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     slideShadows: true,
                 },
                 
-                // Navigation and pagination
                 navigation: {
                     nextEl: '.swiper-button-next',
                     prevEl: '.swiper-button-prev',
@@ -291,18 +265,15 @@ document.addEventListener('DOMContentLoaded', () => {
                     dynamicBullets: true,
                 },
                 
-                // Autoplay for continuous demonstration
                 autoplay: {
                     delay: 4000,
                     disableOnInteraction: false,
                     pauseOnMouseEnter: true,
                 },
                 
-                // Smooth and professional transitions
                 speed: 600,
                 allowTouchMove: true,
                 
-                // Responsive design maintaining the visual beauty
                 breakpoints: {
                     320: {
                         slidesPerView: 1,
@@ -354,14 +325,12 @@ document.addEventListener('DOMContentLoaded', () => {
                     }
                 },
                 
-                // Events for smooth operation
                 on: {
                     init: function () {
                         console.log('Swiper initialized with beautiful coverflow effect');
                         console.log('Total slides:', this.slides.length);
                         console.log('Real slides:', actualSlides);
                         
-                        // Ensure proper initialization
                         this.update();
                         this.updateSize();
                         this.updateSlides();
@@ -374,7 +343,6 @@ document.addEventListener('DOMContentLoaded', () => {
                     },
                     
                     transitionEnd: function () {
-                        // Ensure smooth loop transitions
                         this.update();
                     }
                 }
@@ -382,21 +350,17 @@ document.addEventListener('DOMContentLoaded', () => {
             
         }, 100);
     }
-    
-    // Initialize tooltips and language
     updateTooltips()
     updateLanguage()
 })
 
-// Contact Form Functionality
 const contactForm = document.getElementById('contact-form')
 const submitBtn = document.getElementById('submit-btn')
 const contactStatus = document.getElementById('contact-status')
 
-// EmailJS configuration (you need to replace with your actual EmailJS service details)
-const EMAILJS_SERVICE_ID = 'service_your_id'  // Replace with your EmailJS service ID
-const EMAILJS_TEMPLATE_ID = 'template_your_id'  // Replace with your EmailJS template ID
-const EMAILJS_PUBLIC_KEY = 'your_public_key'  // Replace with your EmailJS public key
+const EMAILJS_SERVICE_ID = 'id' 
+const EMAILJS_TEMPLATE_ID = 'id'  
+const EMAILJS_PUBLIC_KEY = 'id'
 
 function showStatus(message, type) {
     contactStatus.textContent = message
@@ -411,7 +375,6 @@ function showStatus(message, type) {
 }
 
 function sendEmail(formData) {
-    // Using EmailJS to send email
     emailjs.send(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, {
         from_name: formData.get('name'),
         from_email: formData.get('email'),
@@ -443,7 +406,6 @@ function sendEmail(formData) {
     })
 }
 
-// Alternative method using Formspree (recommended)
 function sendEmailFormspree(formData) {
     fetch('https://formspree.io/f/your_form_id', {  // Replace with your Formspree form ID
         method: 'POST',
@@ -480,7 +442,6 @@ function sendEmailFormspree(formData) {
     })
 }
 
-// Simple method using mailto (fallback)
 function sendEmailMailto(formData) {
     const name = formData.get('name')
     const email = formData.get('email')
@@ -517,24 +478,13 @@ if (contactForm) {
         )
         
         const formData = new FormData(contactForm)
-        
-        // Try different methods in order of preference
-        // 1. First try Formspree (recommended for simplicity)
-        // 2. Fallback to EmailJS if available
-        // 3. Final fallback to mailto
-        
-        // For now, using mailto method since it doesn't require external configuration
-        // You can uncomment the preferred method after setting up the service
-        
+ 
         setTimeout(() => {
             sendEmailMailto(formData)
-            // sendEmailFormspree(formData)  // Uncomment after setting up Formspree
-            // sendEmail(formData)  // Uncomment after setting up EmailJS
         }, 1000)
     })
 }
 
-// Update tooltip language based on current language
 function updateTooltips() {
     const tooltipElements = document.querySelectorAll('[data-tooltip]')
     
