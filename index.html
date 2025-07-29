@@ -1,0 +1,795 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Zamir Lizardo - Fullstack Developer with expertise in React, Node.js, Python, and Java. Portfolio showcasing web and mobile development projects.">
+    <meta name="keywords" content="fullstack developer, web developer, React, Node.js, Python, Java, portfolio">
+    <meta name="author" content="Zamir Lizardo">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://your-portfolio-url.com/">
+    <meta property="og:title" content="Zamir Lizardo - Fullstack Developer">
+    <meta property="og:description" content="Fullstack Developer with expertise in modern web technologies. Explore my portfolio of innovative projects.">
+    <meta property="og:image" content="images/image.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://your-portfolio-url.com/">
+    <meta property="twitter:title" content="Zamir Lizardo - Fullstack Developer">
+    <meta property="twitter:description" content="Fullstack Developer with expertise in modern web technologies. Explore my portfolio of innovative projects.">
+    <meta property="twitter:image" content="images/image.png">
+    
+    <!-- Icons-->
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.8/css/line.css">
+    <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="swiper-bundle.min.css">
+    
+    <!-- EmailJS for contact form -->
+    <script src="https://cdn.emailjs.com/dist/email.min.js"></script>
+    
+    <title>Zamir Lizardo - Fullstack Developer Portfolio</title>
+</head>
+<body>
+    <header class="header" id="header">
+        <nav class="nav container">
+            <a href="#" class="nav__logo">Zamir</a>
+            
+            <div class="nav__menu" id="nav-menu">
+                <ul class="nav__list grid">
+                    <li class="nav__item">
+                        <a href="#home" class="nav__link active-link" data-tooltip="Inicio">
+                            <i class="uil uil-estate nav__icon"></i> <span data-key="nav-home">Home</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#about" class="nav__link" data-tooltip="Acerca de mí">
+                            <i class="uil uil-user nav__icon"></i> <span data-key="nav-about">About</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#skills" class="nav__link" data-tooltip="Habilidades">
+                            <i class="uil uil-file-alt nav__icon"></i> <span data-key="nav-skills">Skills</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#portafolio" class="nav__link" data-tooltip="Portafolio">
+                            <i class="uil uil-scenery nav__icon"></i> <span data-key="nav-portfolio">Portfolio</span>
+                        </a>
+                    </li>
+                    <li class="nav__item">
+                        <a href="#contact" class="nav__link" data-tooltip="Contacto">
+                            <i class="uil uil-message nav__icon"></i> <span data-key="nav-contact">Contact</span>
+                        </a>
+                    </li>
+                </ul>
+                <i class="uil uil-times nav__close" id="nav-close"></i>
+            </div>
+            
+            <div class="nav__btns">
+                <button class="change-language" id="language-toggle" data-tooltip="Cambiar idioma" aria-label="Cambiar idioma">EN</button>
+                <button class="change-theme" id="theme-button" data-tooltip="Cambiar tema" aria-label="Cambiar tema">
+                    <i class="uil uil-moon"></i>
+                </button>
+                <button class="nav__toggle" id="nav-toggle" data-tooltip="Menú" aria-label="Abrir menú">
+                    <i class="uil uil-apps"></i>
+                </button>
+            </div>
+        </nav>
+        </nav>
+    </header>
+    <main class="main">
+        <section class="home section" id="home">
+            <div class="home__container container grid">
+                <div class="home__content grid">
+                    <div class="home__social">
+                        <a href="https://www.linkedin.com/in/zamir-rogger-lizardo-mejia-32019b289/" target="_blank" class="home__social-icon">
+                            <i class="uil uil-linkedin-alt"></i>
+                        </a>
+                        <a href="https://github.com/zamir5895" target="_blank" class="home__social-icon">
+                            <i class="uil uil-github-alt"></i>
+                        </a>
+                    </div>
+                    <div class="home__img">
+                        <svg class="home__blob" viewBox="0 0 200 187" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                            <mask id="mask0" mask-type="alpha">
+                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 165.547 
+                                130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 129.362C2.45775 
+                                97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 -0.149132 97.9666 
+                                0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                            </mask>
+                            <g mask="url(#mask0)">
+                                <path d="M190.312 36.4879C206.582 62.1187 201.309 102.826 182.328 134.186C163.346 
+                                165.547 130.807 187.559 100.226 186.353C69.6454 185.297 41.0228 161.023 21.7403 
+                                129.362C2.45775 97.8511 -7.48481 59.1033 6.67581 34.5279C20.9871 10.1032 59.7028 
+                                -0.149132 97.9666 0.00163737C136.23 0.303176 174.193 10.857 190.312 36.4879Z"/>
+                                <image class="home__blob-img" x='0' y="1" href="images/image.png"/>
+                            </g>
+                        </svg>
+                    </div>
+                    <div class="home__data">
+                        <h1 class="home__title" data-key="home-title">
+                            Hola!, Soy Zamir
+                        </h1>
+                        <h3 class="home__subtitle" data-key="home-subtitle">
+                            Fullstack Developer
+                        </h3>
+                        <p class="home__description" data-key="home-description">
+                            Estudiante de Ciencias de la Computacion con experiencia en el desarrollo web y mobile.
+                        </p>
+                        <a href="#contact" class="button button--flex" data-key="home-contact">
+                            Contáctame <i class="uil uil-message button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="home__scroll">
+                    <a href="#about" class="home__scroll-button button--flex">
+                        <i class="uil uil-mouse-alt home__scroll-mouse"></i>
+                        <span class="home__scroll-name">Scroll down</span>
+                        <i class="uil uil-arrow-down home__scroll-arrow"></i>
+                    </a>
+                </div>
+            </div>
+        </section>
+        <section class="about section" id="about">
+            <h2 class="section__title" data-key="about-title">Acerca de mi</h2>
+            <span class="section__subtitle" data-key="about-subtitle">Mi historia</span>
+            <div class="about__container container grid">
+                <img src="images/image.png" alt="Zamir Lizardo Profile" class="about__img" loading="lazy"/>
+                <div class="about__data">
+                    <p class="about__description" data-key="about-description">
+                        Desarrollador Fullstack con experiencia en el desarrollo de backend y frontend. Especializado en tecnologías modernas como React, Node.js, Python y Java. Me apasiona crear soluciones innovadoras y eficientes.
+                    </p>
+                    <div class="about__info">
+                        <div>
+                            <span class="about__info-title">03+</span>
+                            <span class="about__info-name" data-key="about-years">
+                                Años <br> experiencia 
+                            </span>
+                        </div>
+                        <div>
+                            <span class="about__info-title">10+</span>
+                            <span class="about__info-name" data-key="about-projects">
+                                Proyectos <br> completados 
+                            </span>
+                        </div>
+                        
+                    </div>
+                    <div class="about__buttons">
+                        <a id="download-cv" href="pdf/ZamirrCVEspañol.pdf" target="_blank" class="button button--flex" data-key="about-download">
+                            Descargar CV<i class="uil uil-download-alt button__icon"></i>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="skills section" id="skills">
+            <h2 class="section__title">
+                Skills
+            </h2>
+            <span class="section__subtitle">
+                Mi stack tecnologico
+            </span>
+            <div class="skills__container container grid">
+                <div>
+                    <div class="skills__content skills__open">
+                        <div class="skills__header">
+                            <i class="class uil uil-brackets-curly skills__icon">
+
+                            </i>
+                            <div>
+                                <h1 class="skills__title">Languages</h1>
+                            </div>
+                            <i class="uil uil-angle-down skills__arrow"></i>
+                        </div>
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">
+                                        Python: 3 años
+                                    </h3>
+                                    <span class="skills__number">90%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__porcentage skills__python">
+
+                                    </span>                                
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">
+                                        Java: 2 años
+                                    </h3>
+                                    <span class="skills__number">90%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__porcentage skills__java">
+
+                                    </span>                                
+                                </div>
+                            </div>
+                             <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">
+                                        SQL: 3 años
+                                    </h3>
+                                    <span class="skills__number">90%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__porcentage skills__sql">
+
+                                    </span>                                
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">
+                                        JavaScript: 2 años
+                                    </h3>
+                                    <span class="skills__number">85%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__porcentage skills__js">
+                                    </span>                                
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">
+                                        TypeScript: 2 años
+                                    </h3>
+                                    <span class="skills__number">80%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__porcentage skills__ts">
+
+                                    </span>                                
+                                </div>
+                            </div>
+                             <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">
+                                        HTML: 2 años
+                                    </h3>
+                                    <span class="skills__number">80%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__porcentage skills__html">
+
+                                    </span>                                
+                                </div>
+                            </div>
+                             <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">
+                                        CSS: 2 años
+                                    </h3>
+                                    <span class="skills__number">80%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__porcentage skills__css">
+
+                                    </span>                                
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">
+                                        C++: 3 años
+                                    </h3>
+                                    <span class="skills__number">80%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__porcentage skills__cc">
+
+                                    </span>                                
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">
+                                        R: 2 años
+                                    </h3>
+                                    <span class="skills__number">70%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__porcentage skills__r">
+                                    </span>                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <i class="class uil uil-brackets-curly skills__icon">
+
+                            </i>
+                            <div>
+                                <h1 class="skills__title">Frameworks/Technologies</h1>
+                            </div>
+                            <i class="uil uil-angle-down skills__arrow"></i>
+                        </div>
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">
+                                        ReactJs: 2 años
+                                    </h3>
+                                    <span class="skills__number">90%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__porcentage skills__reactjs">
+
+                                    </span>                                
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">
+                                        PostgreSQL: 3 años
+                                    </h3>
+                                    <span class="skills__number">90%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__porcentage skills__postgresql">
+
+                                    </span>                                
+                                </div>
+                            </div>
+
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">
+                                        Spring Boot: 2 años
+                                    </h3>
+                                    <span class="skills__number">90%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__porcentage skills__sb">
+
+                                    </span>                                
+                                </div>
+                            </div>
+                             <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">
+                                        Fast API: 3 años
+                                    </h3>
+                                    <span class="skills__number">90%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__porcentage skills__fapi">
+
+                                    </span>                                
+                                </div>
+                            </div>
+                             <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">
+                                        React Native: 2 año
+                                    </h3>
+                                    <span class="skills__number">80%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__porcentage skills__rn">
+
+                                    </span>                                
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">
+                                        Flask: 1 año
+                                    </h3>
+                                    <span class="skills__number">80%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__porcentage skills__flask">
+
+                                    </span>                                
+                                </div>
+                            </div>
+                             <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">
+                                        MYSQL: 2 años
+                                    </h3>
+                                    <span class="skills__number">80%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__porcentage skills__mysql">
+
+                                    </span>                                
+                                </div>
+                            </div>
+                             <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">
+                                        Express: 2 años
+                                    </h3>
+                                    <span class="skills__number">80%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__porcentage skills__express">
+
+                                    </span>                                
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">
+                                        Vue Js: 2 años
+                                    </h3>
+                                    <span class="skills__number">80%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__porcentage skills__vue">
+
+                                    </span>                                
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">
+                                        Mongo DB: 1 año
+                                    </h3>
+                                    <span class="skills__number">75%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__porcentage skills__mongo">
+                                    </span>                                
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">
+                                        DJango: 1 año
+                                    </h3>
+                                    <span class="skills__number">70%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__porcentage skills__django">
+                                    </span>                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div>
+                    <div class="skills__content skills__close">
+                        <div class="skills__header">
+                            <i class="class uil uil-brackets-curly skills__icon">
+
+                            </i>
+                            <div>
+                                <h1 class="skills__title">Development Tools</h1>
+                            </div>
+                            <i class="uil uil-angle-down skills__arrow"></i>
+                        </div>
+                        <div class="skills__list grid">
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">
+                                        Amazon Web Services (AWS): 2 años
+                                    </h3>
+                                    <span class="skills__number">95%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__porcentage skills__aws">
+
+                                    </span>                                
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">
+                                        Git: 3 años
+                                    </h3>
+                                    <span class="skills__number">95%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__porcentage skills__git">
+
+                                    </span>                                
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">
+                                        Postman: 2 años
+                                    </h3>
+                                    <span class="skills__number">95%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__porcentage skills__postman">
+
+                                    </span>                                
+                                </div>
+                            </div>
+                             <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">
+                                        Docker: 2 años
+                                    </h3>
+                                    <span class="skills__number">85%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__porcentage skills__docker">
+
+                                    </span>                                
+                                </div>
+                            </div>
+                            <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">
+                                        Kubernetes: 1 año
+                                    </h3>
+                                    <span class="skills__number">60%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__porcentage skills__kubernetes">
+
+                                    </span>                                
+                                </div>
+                            </div>
+                             <div class="skills__data">
+                                <div class="skills__titles">
+                                    <h3 class="skills__name">
+                                        Kafka: 1 año
+                                    </h3>
+                                    <span class="skills__number">60%</span>
+                                </div>
+                                <div class="skills__bar">
+                                    <span class="skills__porcentage skills__kafka">
+
+                                    </span>                                
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="portafolio section" id="portafolio">
+            <h2 class="section__title" data-key="portfolio-title">Portafolio</h2>
+            <span class="section__subtitle" data-key="portfolio-subtitle">Proyectos recientes</span>
+            
+            <div class="portafolio__container container swiper">
+                <div class="swiper-wrapper">
+                    <div class="portafolio__content grid swiper-slide">
+                        <img src="images/portafolio1.png" alt="Connect Project" class="portafolio__img" loading="lazy">
+                        <div class="portafolio__data">
+                            <h3 class="portafolio__title">Connect</h3>
+                            <p class="portafolio__description" data-key="project1-desc">
+                                Plataforma fullstack que conecta viajeros y anfitriones con comunicación en tiempo real. Implementé microservicios con Docker, backend en Java Spring y Node.js, bases de datos PostgreSQL, MySQL y MongoDB, desplegado en AWS.
+                            </p>
+                            <div class="portafolio__tech">
+                                <span class="portafolio__tech-item">Java Spring</span>
+                                <span class="portafolio__tech-item">Node.js</span>
+                                <span class="portafolio__tech-item">React</span>
+                                <span class="portafolio__tech-item">PostgreSQL</span>
+                                <span class="portafolio__tech-item">Docker</span>
+                                <span class="portafolio__tech-item">AWS</span>
+                            </div>
+                            <div class="portafolio__buttons">
+                                <a href="https://github.com/zamir5895/connect-backend" target="_blank" class="button button--flex button-small portafolio__button">
+                                    <span data-key="view-code">Ver Código</span>
+                                    <i class="uil uil-github-alt button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portafolio__content grid swiper-slide">
+                        <img src="images/portafolio2.png" alt="ShopUtec Project" class="portafolio__img" loading="lazy">
+                        <div class="portafolio__data">
+                            <h3 class="portafolio__title">ShopUtec</h3>
+                            <p class="portafolio__description" data-key="project2-desc">
+                                Sistema de e-commerce basado en microservicios con API orquestada. Backend desarrollado en Python (Django, Flask), Node.js y Java Spring. Incluye ingesta de datos con AWS Glue para análisis y escalabilidad.
+                            </p>
+                            <div class="portafolio__tech">
+                                <span class="portafolio__tech-item">Django</span>
+                                <span class="portafolio__tech-item">Flask</span>
+                                <span class="portafolio__tech-item">Express.js</span>
+                                <span class="portafolio__tech-item">Java Spring</span>
+                                <span class="portafolio__tech-item">AWS Glue</span>
+                                <span class="portafolio__tech-item">Docker</span>
+                            </div>
+                            <div class="portafolio__buttons">
+                                <a href="https://github.com/zamir5895/Microservicios-Backend-OnlineShop" target="_blank" class="button button--flex button-small portafolio__button">
+                                    <span data-key="view-code">Ver Código</span>
+                                    <i class="uil uil-github-alt button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portafolio__content grid swiper-slide">
+                        <img src="images/portafolio3.png" alt="ShareYourTaste Project" class="portafolio__img" loading="lazy">
+                        <div class="portafolio__data">
+                            <h3 class="portafolio__title">ShareYourTaste</h3>
+                            <p class="portafolio__description" data-key="project3-desc">
+                                Sistema multi-tenant para streaming de música con arquitectura serverless usando AWS Lambda. Pipelines ETL para procesamiento de datos y visualización en Looker, diseñado para máxima eficiencia y escalabilidad.
+                            </p>
+                            <div class="portafolio__tech">
+                                <span class="portafolio__tech-item">AWS Lambda</span>
+                                <span class="portafolio__tech-item">Python</span>
+                                <span class="portafolio__tech-item">ETL</span>
+                                <span class="portafolio__tech-item">Looker</span>
+                                <span class="portafolio__tech-item">Serverless</span>
+                            </div>
+                            <div class="portafolio__buttons">
+                                <a href="https://github.com/joaquinsalinas06/Cloud-Computing-Project-II" target="_blank" class="button button--flex button-small portafolio__button">
+                                    <span data-key="view-code">Ver Código</span>
+                                    <i class="uil uil-github-alt button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portafolio__content grid swiper-slide">
+                        <img src="images/portafolio4.png" alt="Matemix Project" class="portafolio__img" loading="lazy">
+                        <div class="portafolio__data">
+                            <h3 class="portafolio__title">Matemix</h3>
+                            <p class="portafolio__description" data-key="project4-desc">
+                                Tutor de matemáticas con IA utilizando microservicios FastAPI y MongoDB. Integración con APIs de Gemini y base de datos vectoriales para mantener contexto conversacional y personalizar el aprendizaje.
+                            </p>
+                            <div class="portafolio__tech">
+                                <span class="portafolio__tech-item">FastAPI</span>
+                                <span class="portafolio__tech-item">MongoDB</span>
+                                <span class="portafolio__tech-item">Gemini AI</span>
+                                <span class="portafolio__tech-item">Vector DB</span>
+                                <span class="portafolio__tech-item">Docker</span>
+                            </div>
+                            <div class="portafolio__buttons">
+                                <a href="https://github.com/zamir5895/math-tutor-ai" target="_blank" class="button button--flex button-small portafolio__button">
+                                    <span data-key="view-code">Ver Código</span>
+                                    <i class="uil uil-github-alt button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="portafolio__content grid swiper-slide">
+                        <img src="images/portafolio5.png" alt="AgroChingas Project" class="portafolio__img" loading="lazy">
+                        <div class="portafolio__data">
+                            <h3 class="portafolio__title">AgroChingas</h3>
+                            <p class="portafolio__description" data-key="project5-desc">
+                                Plataforma web moderna para negocio agrícola desarrollada con Next.js. Interfaz responsiva con gestión de productos, catálogo interactivo y sistema de contacto optimizado para la experiencia del usuario.
+                            </p>
+                            <div class="portafolio__tech">
+                                <span class="portafolio__tech-item">Next.js</span>
+                                <span class="portafolio__tech-item">React</span>
+                                <span class="portafolio__tech-item">TypeScript</span>
+                                <span class="portafolio__tech-item">Vercel</span>
+                                <span class="portafolio__tech-item">Responsive</span>
+                            </div>
+                            <div class="portafolio__buttons">
+                                <a href="https://github.com/zamir5895/agroChingas" target="_blank" class="button button--flex button-small portafolio__button">
+                                    <span data-key="view-code">Ver Código</span>
+                                    <i class="uil uil-github-alt button__icon"></i>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="swiper-button-next">
+                </div>
+                <div class="swiper-button-prev">
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+        </section>
+        <section class="contact section" id="contact">
+            <h2 class="section__title" data-key="contact-title">Contáctame</h2>
+            <span class="section__subtitle" data-key="contact-subtitle">Pongámonos en contacto</span>
+            <div class="contact__container container grid">
+                <div class="contact__info">
+                    <div class="contact__information">
+                        <i class="uil uil-phone contact__icon"></i>
+                        <div>
+                            <h3 class="contact__title" data-key="contact-call">Llámame</h3>
+                            <span class="contact__subtitle">+51983505831</span>
+                        </div>
+                    </div>
+                     <div class="contact__information">
+                        <i class="uil uil-envelope contact__icon"></i>
+                        <div>
+                            <h3 class="contact__title" data-key="contact-email">Envíame un correo</h3>
+                            <span class="contact__subtitle">lmr293141@gmail.com</span>
+                        </div>
+                    </div>
+                     <div class="contact__information">
+                        <i class="uil uil-map-marker contact__icon"></i>
+                        <div>
+                            <h3 class="contact__title" data-key="contact-location">Ubicación</h3>
+                            <span class="contact__subtitle">Lima, Peru</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <form class="contact__form grid" id="contact-form">
+                    <div class="contact__inputs grid">
+                        <div class="contact__content">
+                            <label for="name" class="contact__label" data-key="contact-name">Nombre</label>
+                            <input type="text" id="name" name="name" class="contact__input" required>
+                        </div>
+                        <div class="contact__content">
+                            <label for="email" class="contact__label" data-key="contact-email-label">Email</label>
+                            <input type="email" id="email" name="email" class="contact__input" required>
+                        </div>
+                    </div>
+                    <div class="contact__content">
+                        <label for="subject" class="contact__label" data-key="contact-subject">Asunto</label>
+                        <input type="text" id="subject" name="subject" class="contact__input" required>
+                    </div>
+                    <div class="contact__content">
+                        <label for="message" class="contact__label" data-key="contact-message">Mensaje</label>
+                        <textarea name="message" id="message" cols="0" rows="7" class="contact__input" required></textarea>
+                    </div>
+                    
+                    <div>
+                        <button type="submit" class="button button--flex" id="submit-btn">
+                            <span data-key="contact-send">Enviar Mensaje</span>
+                            <i class="uil uil-message button__icon"></i>
+                        </button>
+                    </div>
+                    
+                    <div class="contact__status" id="contact-status"></div>
+                </form>
+            </div>
+        </section>
+    </main>
+    
+    <!--Footer-->
+    <footer class="footer">
+        <div class="footer__bg">
+            <div class="footer__container container grid">
+                <div>
+                    <h1 class="footer__title">Zamir</h1>
+                    <span class="footer__subtitle" data-key="footer-subtitle">Fullstack Developer</span>
+                </div>
+                
+                <ul class="footer__links">
+                    <li>
+                        <a href="#skills" class="footer__link" data-key="footer-skills">Skills</a>
+                    </li>
+                    <li>
+                        <a href="#portafolio" class="footer__link" data-key="footer-portfolio">Portfolio</a>
+                    </li>
+                    <li>
+                        <a href="#contact" class="footer__link" data-key="footer-contact">Contact</a>
+                    </li>
+                </ul>
+                
+                <div class="footer__socials">
+                    <a href="https://github.com/zamir5895" target="_blank" class="footer__social">
+                        <i class="uil uil-github-alt"></i>
+                    </a>
+                    <a href="https://www.linkedin.com/in/zamir-rogger-lizardo-mejia-32019b289/" target="_blank" class="footer__social">
+                        <i class="uil uil-linkedin-alt"></i>
+                    </a>
+                    <a href="mailto:lmr293141@gmail.com" class="footer__social">
+                        <i class="uil uil-envelope"></i>
+                    </a>
+                </div>
+            </div>
+            
+            <p class="footer__copy" data-key="footer-copy">&#169; Zamir Lizardo. All rights reserved</p>
+        </div>
+    </footer>
+    
+    <!--Scroll top-->
+    <a href="#" class="scrollup" id="scroll-up">
+        <i class="uil uil-arrow-up scrollup__icon"></i>
+    </a>
+    
+    <script src="swiper-bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
