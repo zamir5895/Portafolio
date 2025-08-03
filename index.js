@@ -191,7 +191,7 @@ function updateLanguage() {
     
     const cvLink = document.getElementById('download-cv')
     if (cvLink) {
-        cvLink.href = currentLanguage === 'es' ? 'pdf/ZamirrCVEspañol.pdf' : 'pdf/ZamirrCVEnglish.pdf'
+        cvLink.href = currentLanguage === 'es' ? 'pdf/ZamirCVEspañol.pdf' : 'pdf/ZamirCVEnglish.pdf'
     }
     
     document.title = currentLanguage === 'es' 
