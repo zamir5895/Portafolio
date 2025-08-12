@@ -135,7 +135,10 @@ const translations = {
         'contact-email-label': 'Email',
         'contact-subject': 'Asunto',
         'contact-message': 'Mensaje',
-        'contact-send': 'Enviar Mensaje'
+        'contact-send': 'Enviar Mensaje',
+        'años': 'años',
+        'año': 'año',
+        'stack-tech':'Mi stack tecnologico'
     },
     en: {
         'nav-home': 'Home',
@@ -176,7 +179,10 @@ const translations = {
         'contact-email-label': 'Email',
         'contact-subject': 'Subject',
         'contact-message': 'Message',
-        'contact-send': 'Send Message'
+        'contact-send': 'Send Message',
+        'años': 'years',
+        'año': 'year',
+        'stack-tech':'My stack'
     }
 }
 
@@ -239,7 +245,7 @@ document.addEventListener('DOMContentLoaded', () => {
         
         setTimeout(() => {
             swiper = new Swiper('.portafolio__container', {
-                slidesPerView: 2,
+                slidesPerView: 3,
                 spaceBetween: 50,
                 centeredSlides: true,
                 
@@ -276,28 +282,26 @@ document.addEventListener('DOMContentLoaded', () => {
                 
                 breakpoints: {
                     320: {
-                        slidesPerView: 1,
-                        spaceBetween: 20,
-                        effect: 'coverflow',
-                        coverflowEffect: {
-                            rotate: 30,
-                            stretch: 0,
-                            depth: 80,
-                            modifier: 1,
-                            slideShadows: true,
-                        }
+                        slidesPerView: 0,
+                        spaceBetween: 50,
+                        effect: 'slide',
+                        centeredSlides: true,
+                        autoplay: {
+                            delay: 4000,
+                            disableOnInteraction: false,
+                        },
+                    
                     },
                     576: {
-                        slidesPerView: 1.5,
-                        spaceBetween: 30,
-                        effect: 'coverflow',
-                        coverflowEffect: {
-                            rotate: 40,
-                            stretch: 0,
-                            depth: 90,
-                            modifier: 1,
-                            slideShadows: true,
-                        }
+                        slidesPerView: 1,
+                        spaceBetween: 50,
+                        effect: 'slide', 
+                        centeredSlides: false,
+                        autoplay: {
+                            delay: 4000,
+                            disableOnInteraction: false,
+                        },
+                        
                     },
                     768: {
                         slidesPerView: 2,
